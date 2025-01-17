@@ -40,17 +40,8 @@ export default async function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head />
-      <body
-        className={cn(
-          "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable
-        )}
-      >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme={siteConfig.defaultNextTheme}
-          enableSystem
-        >
+      <body className={cn("flex flex-col min-h-screen bg-background font-sans antialiased", fontSans.variable)}>
+        <ThemeProvider attribute="class" defaultTheme={siteConfig.defaultNextTheme} enableSystem>
           <Header />
           <main className="flex flex-col items-center py-6">{children}</main>
           <Footer />
@@ -67,5 +58,5 @@ export default async function RootLayout({
         )}
       </body>
     </html>
-  );
+  )
 }
