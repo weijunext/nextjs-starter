@@ -24,7 +24,7 @@ export default function MobileMenu() {
   const headerLinks: HeaderLink[] = tHeader.raw("links");
 
   return (
-    <div className="flex items-center md:hidden">
+    <div className="flex items-center gap-1 md:hidden">
       <LocaleSwitcher />
       <ThemeToggle />
       <DropdownMenu>
