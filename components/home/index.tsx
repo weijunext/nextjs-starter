@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import WebsiteLogo from "@/components/WebsiteLogo";
 import { siteConfig } from "@/config/site";
+import { MousePointerClick } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { SiDiscord } from "react-icons/si";
@@ -30,7 +31,24 @@ export default function HomeComponent() {
           {t("description")}
         </p>
 
-        <div className="mt-10 flex items-center justify-center gap-x-6">
+        <div className="mt-10 flex items-center justify-center gap-2">
+          <Button
+            className="h-11 rounded-xl px-8 py-2 bg-white text-indigo-500 hover:text-indigo-600 border-2 border-indigo-500"
+            variant="outline"
+            asChild
+          >
+            <Link
+              href="https://nexty.dev/"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Get SaaS Version - Nexty.dev"
+              prefetch={false}
+              className="flex items-center gap-2"
+            >
+              <MousePointerClick className="w-4 h-4 text-indigo-500" />
+              Get SaaS Version
+            </Link>
+          </Button>
           <Button
             className="h-11 rounded-xl px-8 py-2 bg-white text-indigo-500 hover:text-indigo-600 border-2 border-indigo-500"
             variant="outline"
