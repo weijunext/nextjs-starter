@@ -15,10 +15,10 @@ export async function generateMetadata({
   params,
 }: MetadataProps): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "Blogs" });
+  const t = await getTranslations({ locale, namespace: "Blog" });
 
   return constructMetadata({
-    page: "Blogs",
+    page: "Blog",
     title: t("title"),
     description: t("description"),
     locale: locale as Locale,
@@ -31,7 +31,7 @@ export default async function Page({ params }: { params: Params }) {
   const { locale } = await params;
   const { posts } = await getPosts(locale);
 
-  const t = await getTranslations("Blogs");
+  const t = await getTranslations("Blog");
 
   return (
     <div className="container mx-auto px-4 py-8">
