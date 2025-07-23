@@ -5,10 +5,28 @@
     "countdown": "閉じるまで {countdown} 秒"
   },
   "Header": {
-    "blogs": "ブログ",
-    "about": "サイトについて",
-    "sourceCode": "ソースコード",
-    "proVersion": "Pro Version"
+    "links": [
+      {
+        "name": "ブログ",
+        "href": "/blog"
+      },
+      {
+        "name": "サイトについて",
+        "href": "/about"
+      },
+      {
+        "name": "Source Code",
+        "href": "https://github.com/weijunext/nextjs-15-starter",
+        "target": "_blank",
+        "rel": "noopener noreferrer nofollow"
+      },
+      {
+        "name": "Pro Version",
+        "href": "https://nexty.dev",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      }
+    ]
   },
   "Footer": {
     "Copyright": "Copyright © {year} Next Forge. All rights reserved.",

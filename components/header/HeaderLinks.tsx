@@ -1,50 +1,42 @@
-import { PRO_VERSION, SOURCE_CODE_URL } from "@/config/site";
-import { Link as I18nLink } from "@/i18n/routing";
-import { useTranslations } from "next-intl";
+"use client";
 
-export const headerLinks = [
-  {
-    name: "blogs",
-    href: "/blogs",
-  },
-  {
-    name: "about",
-    href: "/about",
-  },
-  {
-    name: "sourceCode",
-    href: SOURCE_CODE_URL,
-    target: "_blank",
-    rel: "noopener noreferrer nofollow",
-  },
-  {
-    name: "proVersion",
-    href: PRO_VERSION,
-    target: "_blank",
-    rel: "noopener noreferrer",
-  },
-];
+import { Link as I18nLink, usePathname } from "@/i18n/routing";
+import { cn } from "@/lib/utils";
+import { HeaderLink } from "@/types/common";
+import { ExternalLink } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 const HeaderLinks = () => {
   const tHeader = useTranslations("Header");
-  // const locale = useLocale();
+  const pathname = usePathname();
+
+  const headerLinks: HeaderLink[] = tHeader.raw("links");
 
   return (
-    <div className="hidden md:flex flex-row items-center gap-x-4 font-bold">
+    <div className="hidden md:flex flex-row items-center gap-x-2 text-sm text-muted-foreground">
       {headerLinks.map((link) => (
         <I18nLink
           key={link.name}
           href={link.href}
-          title={tHeader(link.name)}
-          prefetch={false}
+          title={link.name}
+          prefetch={link.target && link.target === "_blank" ? false : true}
           target={link.target || "_self"}
           rel={link.rel || undefined}
-          className="mx-2 hover:underline"
+          className={cn(
+            "rounded-xl px-4 py-2 flex items-center gap-x-1 hover:bg-accent-foreground/10 hover:text-accent-foreground",
+            pathname === link.href && "font-medium text-accent-foreground"
+          )}
         >
-          {tHeader(link.name)}
+          {link.name}
+          {link.target && link.target === "_blank" && (
+            <span className="text-xs">
+              <ExternalLink className="w-4 h-4" />
+            </span>
+          )}
         </I18nLink>
       ))}
     </div>
   );
 };
+
 export default HeaderLinks;

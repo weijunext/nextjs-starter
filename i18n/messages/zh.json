@@ -5,10 +5,28 @@
     "countdown": "将在 {countdown} 秒后关闭"
   },
   "Header": {
-    "blogs": "博客",
-    "about": "关于",
-    "sourceCode": "源码",
-    "proVersion": "专业版"
+    "links": [
+      {
+        "name": "博客",
+        "href": "/blog"
+      },
+      {
+        "name": "关于",
+        "href": "/about"
+      },
+      {
+        "name": "源码",
+        "href": "https://github.com/weijunext/nextjs-15-starter",
+        "target": "_blank",
+        "rel": "noopener noreferrer nofollow"
+      },
+      {
+        "name": "高级版",
+        "href": "https://nexty.dev",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      }
+    ]
   },
   "Footer": {
     "Copyright": "版权所有 © {year} Next Forge。保留所有权利。",

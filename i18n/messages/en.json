@@ -5,10 +5,28 @@
     "countdown": "Closing in {countdown} seconds"
   },
   "Header": {
-    "blogs": "Blogs",
-    "about": "About",
-    "sourceCode": "Source Code",
-    "proVersion": "Pro Version"
+    "links": [
+      {
+        "name": "Blog",
+        "href": "/blog"
+      },
+      {
+        "name": "About",
+        "href": "/about"
+      },
+      {
+        "name": "Source Code",
+        "href": "https://github.com/weijunext/nextjs-15-starter",
+        "target": "_blank",
+        "rel": "noopener noreferrer nofollow"
+      },
+      {
+        "name": "Pro Version",
+        "href": "https://nexty.dev",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      }
+    ]
   },
   "Footer": {
     "Copyright": "Copyright © {year} Next Forge. All rights reserved.",
@@ -30,7 +48,7 @@
     "description": "A multilingual Next.js 15 starter with built-in i18n support. Launch your global-ready web application with a clean, efficient, and SEO-friendly foundation.",
     "whoIsUsing": "Who is Using This Starter"
   },
-  "Blogs": {
+  "Blog": {
     "title": "Blog Posts",
     "description": "A list of blog posts"
   },
