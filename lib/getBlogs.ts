@@ -7,7 +7,7 @@ import path from 'path';
 const POSTS_BATCH_SIZE = 10;
 
 export async function getPosts(locale: string = DEFAULT_LOCALE): Promise<{ posts: BlogPost[] }> {
-  const postsDirectory = path.join(process.cwd(), 'blog', locale);
+  const postsDirectory = path.join(process.cwd(), 'blogs', locale);
 
   // is directory exist
   if (!fs.existsSync(postsDirectory)) {
