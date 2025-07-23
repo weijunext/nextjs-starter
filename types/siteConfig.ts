@@ -9,15 +9,17 @@ export type ThemeColor = {
 }
 export type SiteConfig = {
   name: string
-  tagLine: string
-  description: string
+  tagLine?: string
+  description?: string
   url: string
   authors: AuthorsConfig[]
-  socialLinks: {
-    github: string
-    bluesky: string
-    twitter: string
-    email: string
+  socialLinks?: {
+    github?: string
+    bluesky?: string
+    twitter?: string
+    twitterZh?: string
+    discord?: string
+    email?: string
   }
   creator: string
   themeColors?: string | ThemeColor[]

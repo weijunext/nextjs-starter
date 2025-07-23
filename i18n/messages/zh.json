@@ -29,7 +29,79 @@
     ]
   },
   "Footer": {
-    "Copyright": "版权所有 © {year} Next Forge。保留所有权利。",
+    "Copyright": "版权所有 © {year} {name} 保留所有权利。",
+    "PrivacyPolicy": "隐私政策",
+    "TermsOfService": "服务条款",
+    "Links": {
+      "groups": [
+        {
+          "title": "语言",
+          "links": [
+            {
+              "href": "/en",
+              "name": "English",
+              "useA": true
+            },
+            {
+              "href": "/zh",
+              "name": "中文",
+              "useA": true
+            },
+            {
+              "href": "/ja",
+              "name": "日本語",
+              "useA": true
+            }
+          ]
+        },
+        {
+          "title": "开源项目",
+          "links": [
+            {
+              "href": "https://github.com/weijunext/nextjs-15-starter",
+              "name": "Next Forge",
+              "rel": "noopener noreferrer nofollow",
+              "target": "_blank"
+            },
+            {
+              "href": "https://github.com/weijunext/landing-page-boilerplate",
+              "name": "Landing Page Boilerplate",
+              "rel": "noopener noreferrer nofollow",
+              "target": "_blank"
+            },
+            {
+              "href": "https://github.com/weijunext/weekly-boilerplate",
+              "name": "Blog Boilerplate",
+              "rel": "noopener noreferrer nofollow",
+              "target": "_blank"
+            }
+          ]
+        },
+        {
+          "title": "其他产品",
+          "links": [
+            {
+              "href": "https://nexty.dev/",
+              "name": "Nexty - SaaS Template",
+              "rel": "noopener noreferrer",
+              "target": "_blank"
+            },
+            {
+              "href": "https://ogimage.click/",
+              "name": "OG Image Generator",
+              "rel": "noopener noreferrer",
+              "target": "_blank"
+            },
+            {
+              "href": "https://ntab.dev/",
+              "name": "nTab",
+              "rel": "noopener noreferrer",
+              "target": "_blank"
+            }
+          ]
+        }
+      ]
+    },
     "Newsletter": {
       "title": "订阅我们的邮件",
       "description": "获取最新的 Next.js 资讯和教程",

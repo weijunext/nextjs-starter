@@ -1,35 +1,48 @@
+import BuiltWithButton from "@/components/BuiltWithButton";
 import { Newsletter } from "@/components/footer/Newsletter";
 import { TwitterX } from "@/components/social-icons/icons";
 import { siteConfig } from "@/config/site";
 import { Link as I18nLink } from "@/i18n/routing";
+import { FooterLink } from "@/types/common";
 import { GithubIcon, MailIcon } from "lucide-react";
-import { useTranslations } from "next-intl";
-import { SiBluesky } from "react-icons/si";
+import { getMessages, getTranslations } from "next-intl/server";
+import Link from "next/link";
+import { SiBluesky, SiDiscord } from "react-icons/si";
 
-export default function Footer() {
-  const t = useTranslations("Home");
-  const tFooter = useTranslations("Footer");
+export default async function Footer() {
+  const messages = await getMessages();
+
+  const t = await getTranslations("Home");
+  const tFooter = await getTranslations("Footer");
+
+  const footerLinks: FooterLink[] = tFooter.raw("Links.groups");
+  footerLinks.forEach((group) => {
+    const pricingLink = group.links.find((link) => link.id === "pricing");
+    if (pricingLink) {
+      pricingLink.href = process.env.NEXT_PUBLIC_PRICING_PATH!;
+    }
+  });
+
   return (
-    <div className="bg-gray-800 dark:bg-primary-foreground text-gray-300">
+    <div className="bg-gray-900 text-gray-300">
       <footer className="py-2 border-t border-gray-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 py-12 lg:grid-cols-6">
             <div className="w-full flex flex-col sm:flex-row lg:flex-col gap-4 col-span-full md:col-span-2">
               <div className="space-y-4 flex-1">
                 <div className="items-center space-x-2 flex">
-                  <img src="/logo.svg" alt="Next Forge" className="w-8 h-8" />
-
-                  <span className="text-white text-2xl font-bold">
+                  <h2 className="highlight-text text-2xl font-bold">
                     {t("title")}
-                  </span>
+                  </h2>
                 </div>
 
                 <p className="text-sm p4-4 md:pr-12">{t("tagLine")}</p>
 
                 <div className="flex items-center gap-2">
-                  {siteConfig.socialLinks.github && (
-                    <a
+                  {siteConfig.socialLinks?.github && (
+                    <Link
                       href={siteConfig.socialLinks.github}
+                      prefetch={false}
                       target="_blank"
                       rel="noreferrer nofollow noopener"
                       aria-label="GitHub"
@@ -37,23 +50,25 @@ export default function Footer() {
                       className="inline-flex h-8 w-8 items-center justify-center rounded-md hover:bg-accent hover:text-accent-foreground"
                     >
                       <GithubIcon className="size-4" aria-hidden="true" />
-                    </a>
+                    </Link>
                   )}
-                  {siteConfig.socialLinks.bluesky && (
-                    <a
-                      href={siteConfig.socialLinks.bluesky}
+                  {siteConfig.socialLinks?.discord && (
+                    <Link
+                      href={siteConfig.socialLinks.discord}
+                      prefetch={false}
                       target="_blank"
                       rel="noreferrer nofollow noopener"
-                      aria-label="Blue Sky"
-                      title="View on Bluesky"
+                      aria-label="Discord"
+                      title="Join Discord"
                       className="inline-flex h-8 w-8 items-center justify-center rounded-md hover:bg-accent hover:text-accent-foreground"
                     >
-                      <SiBluesky className="w-4 h-4" aria-hidden="true" />
-                    </a>
+                      <SiDiscord className="w-4 h-4" aria-hidden="true" />
+                    </Link>
                   )}
-                  {siteConfig.socialLinks.twitter && (
-                    <a
+                  {siteConfig.socialLinks?.twitter && (
+                    <Link
                       href={siteConfig.socialLinks.twitter}
+                      prefetch={false}
                       target="_blank"
                       rel="noreferrer nofollow noopener"
                       aria-label="Twitter"
@@ -61,11 +76,25 @@ export default function Footer() {
                       className="inline-flex h-8 w-8 items-center justify-center rounded-md hover:bg-accent hover:text-accent-foreground"
                     >
                       <TwitterX className="w-4 h-4" aria-hidden="true" />
-                    </a>
+                    </Link>
                   )}
-                  {siteConfig.socialLinks.email && (
-                    <a
+                  {siteConfig.socialLinks?.bluesky && (
+                    <Link
+                      href={siteConfig.socialLinks.bluesky}
+                      prefetch={false}
+                      target="_blank"
+                      rel="noreferrer nofollow noopener"
+                      aria-label="Blue Sky"
+                      title="View on Bluesky"
+                      className="inline-flex h-8 w-8 items-center justify-center rounded-md hover:bg-accent hover:text-accent-foreground"
+                    >
+                      <SiBluesky className="w-4 h-4" aria-hidden="true" />
+                    </Link>
+                  )}
+                  {siteConfig.socialLinks?.email && (
+                    <Link
                       href={`mailto:${siteConfig.socialLinks.email}`}
+                      prefetch={false}
                       target="_blank"
                       rel="noreferrer nofollow noopener"
                       aria-label="Email"
@@ -73,18 +102,16 @@ export default function Footer() {
                       className="inline-flex h-8 w-8 items-center justify-center rounded-md hover:bg-accent hover:text-accent-foreground"
                     >
                       <MailIcon className="w-4 h-4" />
-                    </a>
+                    </Link>
                   )}
                 </div>
-              </div>
 
-              <div className="w-full flex-1">
-                <Newsletter />
+                <BuiltWithButton />
               </div>
             </div>
 
             {footerLinks.map((section) => (
-              <div key={section.title}>
+              <div key={section.title} className="flex-1">
                 <h3 className="text-white text-lg font-semibold mb-4">
                   {section.title}
                 </h3>
@@ -94,120 +121,67 @@ export default function Footer() {
                       {link.href.startsWith("/") && !link.useA ? (
                         <I18nLink
                           href={link.href}
-                          title={link.label}
+                          title={link.name}
                           prefetch={false}
                           className="hover:text-white transition-colors"
                           target={link.target || ""}
                           rel={link.rel || ""}
                         >
-                          {link.label}
+                          {link.name}
                         </I18nLink>
                       ) : (
-                        <a
+                        <Link
                           href={link.href}
-                          title={link.label}
+                          title={link.name}
+                          prefetch={false}
                           className="hover:text-white transition-colors"
                           target={link.target || ""}
                           rel={link.rel || ""}
                         >
-                          {link.label}
-                        </a>
+                          {link.name}
+                        </Link>
                       )}
                     </li>
                   ))}
                 </ul>
               </div>
             ))}
+
+            {messages.Footer.Newsletter && (
+              <div className="w-full flex-1">
+                <Newsletter />
+              </div>
+            )}
+          </div>
+
+          <div className="border-t border-gray-800 py-6 flex flex-col md:flex-row justify-between items-center">
+            <p className="text-gray-400 text-sm">
+              {tFooter("Copyright", {
+                year: new Date().getFullYear(),
+                name: siteConfig.name,
+              })}
+            </p>
+            <div className="flex space-x-6 mt-4 md:mt-0">
+              <I18nLink
+                href="/privacy-policy"
+                title={tFooter("PrivacyPolicy")}
+                prefetch={false}
+                className="text-gray-400 hover:text-white text-sm"
+              >
+                {tFooter("PrivacyPolicy")}
+              </I18nLink>
+              <I18nLink
+                href="/terms-of-service"
+                title={tFooter("TermsOfService")}
+                prefetch={false}
+                className="text-gray-400 hover:text-white text-sm"
+              >
+                {tFooter("TermsOfService")}
+              </I18nLink>
+            </div>
           </div>
         </div>
       </footer>
-      <div className="mt-2 p-4 flex justify-center items-center border-t border-gray-700 text-center text-sm text-gray-400">
-        <I18nLink
-          href="/about"
-          title="About"
-          prefetch={false}
-          className=" hover:text-white transition-colors"
-        >
-          {tFooter("Copyright", { year: new Date().getFullYear() })}
-        </I18nLink>
-      </div>
     </div>
   );
 }
-
-type FooterLink = {
-  title: string;
-  links: Link[];
-};
-
-type Link = {
-  href: string;
-  label: string;
-  target?: string;
-  rel?: string;
-  useA?: boolean;
-};
-
-const footerLinks: FooterLink[] = [
-  {
-    title: "Languages",
-    links: [
-      { href: "/en", label: "English", useA: true },
-      { href: "/zh", label: "中文", useA: true },
-      { href: "/ja", label: "日本語", useA: true },
-    ],
-  },
-  {
-    title: "Open Source",
-    links: [
-      {
-        href: "https://github.com/weijunext/nextjs-15-starter",
-        label: "Next Forge",
-        rel: "noopener noreferrer nofollow",
-        target: "_blank",
-      },
-      {
-        href: "https://github.com/weijunext/landing-page-boilerplate",
-        label: "Landing Page Boilerplate",
-        rel: "noopener noreferrer nofollow",
-        target: "_blank",
-      },
-      {
-        href: "https://github.com/weijunext/weekly-boilerplate",
-        label: "Blog Boilerplate",
-        rel: "noopener noreferrer nofollow",
-        target: "_blank",
-      },
-    ],
-  },
-  {
-    title: "Other Products",
-    links: [
-      {
-        href: "https://nexty.dev/",
-        label: "Nexty - SaaS Template",
-        rel: "noopener noreferrer",
-        target: "_blank",
-      },
-      {
-        href: "https://ntab.dev/",
-        label: "nTab",
-        rel: "noopener noreferrer",
-        target: "_blank",
-      },
-      {
-        href: "https://ogimage.click/",
-        label: "OG Image Generator",
-        rel: "noopener noreferrer",
-        target: "_blank",
-      },
-    ],
-  },
-  {
-    title: "Legal & Privacy",
-    links: [
-      { href: "/privacy-policy", label: "Privacy Policy" },
-      { href: "/terms-of-service", label: "Terms of Service" },
-    ],
-  },
-];
