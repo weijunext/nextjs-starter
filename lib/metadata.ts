@@ -48,7 +48,7 @@ export async function constructMetadata({
     }]
 
   // Open Graph Site
-  const pageURL = `${locale === DEFAULT_LOCALE ? '' : locale}${path}` || siteConfig.url
+  const pageURL = `${locale === DEFAULT_LOCALE ? '' : `/${locale}`}${path}` || siteConfig.url
 
   // build alternate language links
   const alternateLanguages = Object.keys(LOCALE_NAMES).reduce((acc, lang) => {
