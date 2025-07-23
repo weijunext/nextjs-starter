@@ -84,7 +84,7 @@ pnpm dev
 ## 📝 内容管理
 
 ### 博客文章
-在 `blogs/[locale]` 目录下创建 MDX 文件，支持以下格式:
+在 `blog/[locale]` 目录下创建 MDX 文件，支持以下格式:
 
 ```markdown
 ---
@@ -132,11 +132,11 @@ nextjs-15-starter/
 ├── app/                      # 应用路由目录
 │   ├── [locale]/            # 多语言路由
 │   │   ├── about/           # 关于页面
-│   │   ├── blogs/           # 博客页面
+│   │   ├── blog/           # 博客页面
 │   │   └── ...              # 其他页面
 │   ├── api/                 # API 路由
 │   └── globals/             # 全局组件
-├── blogs/                   # 博客内容 (MDX)
+├── blog/                   # 博客内容 (MDX)
 │   ├── en/                  # 英文博客
 │   ├── ja/                  # 日文博客
 │   └── zh/                  # 中文博客
@@ -214,7 +214,7 @@ pnpm type-check
 1. 新增语言支持：
    - 在 `i18n/messages/` 添加新的语言文件
    - 更新 `i18n/routing.ts` 配置
-   - 在 `blogs/` 和 `content/` 下创建对应语言目录
+   - 在 `blog/` 和 `content/` 下创建对应语言目录
 
 2. 使用翻译：
 ```tsx

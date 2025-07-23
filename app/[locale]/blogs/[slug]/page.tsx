@@ -30,19 +30,19 @@ export async function generateMetadata({
       description: "Page not found",
       noIndex: true,
       locale: locale as Locale,
-      path: `/blogs/${slug}`,
-      canonicalUrl: `/blogs/${slug}`,
+      path: `/blog/${slug}`,
+      canonicalUrl: `/blog/${slug}`,
     });
   }
 
   return constructMetadata({
-    page: "blogs",
+    page: "blog",
     title: post.title,
     description: post.description,
     images: post.image ? [post.image] : [],
     locale: locale as Locale,
-    path: `/blogs/${slug}`,
-    canonicalUrl: `/blogs/${slug}`,
+    path: `/blog/${slug}`,
+    canonicalUrl: `/blog/${slug}`,
   });
 }
 
@@ -92,7 +92,7 @@ export async function generateStaticParams() {
 
   return LOCALES.flatMap((locale) =>
     posts.map((post) => {
-      const slugPart = post.slug.replace(/^\//, "").replace(/^blogs\//, "");
+      const slugPart = post.slug.replace(/^\//, "").replace(/^blog\//, "");
 
       return {
         locale,

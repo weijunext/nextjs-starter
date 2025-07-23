@@ -11,7 +11,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Static pages
   const staticPages = [
     '',
-    '/blogs',
+    '/blog',
     '/about',
     '/privacy-policy',
     '/terms-of-service',
@@ -31,7 +31,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     LOCALES.map(async (locale) => {
       const { posts } = await getPosts(locale)
       return posts.map(post => ({
-        url: `${siteUrl}${locale === DEFAULT_LOCALE ? '' : `/${locale}`}/blogs${post.slug}`,
+        url: `${siteUrl}${locale === DEFAULT_LOCALE ? '' : `/${locale}`}/blog${post.slug}`,
         lastModified: post.metadata.updatedAt || post.date,
         changeFrequency: 'daily' as const,
         priority: 0.7,

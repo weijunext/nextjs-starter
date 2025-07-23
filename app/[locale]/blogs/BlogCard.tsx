@@ -6,7 +6,7 @@ import Image from "next/image";
 export function BlogCard({ post, locale }: { post: BlogPost; locale: string }) {
   return (
     <I18nLink
-      href={`/blogs${post.slug}`}
+      href={`/blog${post.slug}`}
       prefetch={false}
       className="bg-transparent rounded-lg hover:underline"
     >

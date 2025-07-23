@@ -1,4 +1,4 @@
-import { BlogCard } from "@/app/[locale]/blogs/BlogCard";
+import { BlogCard } from "@/app/[locale]/blog/BlogCard";
 import { Locale } from "@/i18n/routing";
 import { getPosts } from "@/lib/getBlogs";
 import { constructMetadata } from "@/lib/metadata";
@@ -22,8 +22,8 @@ export async function generateMetadata({
     title: t("title"),
     description: t("description"),
     locale: locale as Locale,
-    path: `/blogs`,
-    canonicalUrl: `/blogs`,
+    path: `/blog`,
+    canonicalUrl: `/blog`,
   });
 }
 

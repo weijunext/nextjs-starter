@@ -84,7 +84,7 @@ Visit http://localhost:3000 to view your application.
 ## 📝 Content Management
 
 ### Blog Posts
-Create MDX files in `blogs/[locale]` with the following format:
+Create MDX files in `blog/[locale]` with the following format:
 
 ```markdown
 ---
@@ -132,14 +132,14 @@ nextjs-15-starter/
 ├── app/                      # App directory
 │   ├── [locale]/            # Internationalized routes
 │   │   ├── about/           # About page
-│   │   ├── blogs/           # Blog pages
+│   │   ├── blog/           # Blog pages
 │   │   └── ...              # Other pages
 │   ├── api/                 # API routes
 │   └── globals/             # Global components
-├── blogs/                   # Blog content (MDX)
-│   ├── en/                  # English blogs
-│   ├── ja/                  # Japanese blogs
-│   └── zh/                  # Chinese blogs
+├── blog/                   # Blog content (MDX)
+│   ├── en/                  # English blog
+│   ├── ja/                  # Japanese blog
+│   └── zh/                  # Chinese blog
 ├── components/              # Reusable components
 │   ├── ui/                  # Base UI components
 │   ├── header/              # Header components
@@ -213,7 +213,7 @@ pnpm type-check
 1. Adding new language support:
    - Add new language files in `i18n/messages/`
    - Update `i18n/routing.ts` configuration
-   - Create corresponding language directories in `blogs/` and `content/`
+   - Create corresponding language directories in `blog/` and `content/`
 
 2. Using translations:
 ```tsx
