@@ -9,6 +9,7 @@ const TWITTER_URL = 'https://x.com/weijunext'
 const BSKY_URL = 'https://bsky.app/profile/judewei.bsky.social'
 const EMAIL_URL = 'mailto:weijunext@gmail.com'
 const GITHUB_URL = 'https://github.com/weijunext'
+const DISCORD_URL = process.env.NEXT_PUBLIC_DISCORD_INVITE_URL
 
 export const siteConfig: SiteConfig = {
   name: "Next Forge",
@@ -24,10 +25,11 @@ export const siteConfig: SiteConfig = {
   ],
   creator: '@weijunext',
   socialLinks: {
-    bluesky: BSKY_URL,
+    discord: DISCORD_URL,
     twitter: TWITTER_URL,
-    email: EMAIL_URL,
     github: GITHUB_URL,
+    bluesky: BSKY_URL,
+    email: EMAIL_URL
   },
   themeColors: [
     { media: '(prefers-color-scheme: light)', color: 'white' },

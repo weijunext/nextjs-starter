@@ -1,5 +1,9 @@
+import { Button } from "@/components/ui/button";
 import WebsiteLogo from "@/components/WebsiteLogo";
+import { siteConfig } from "@/config/site";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
+import { SiDiscord } from "react-icons/si";
 
 export default function HomeComponent() {
   const t = useTranslations("Home");
@@ -25,6 +29,29 @@ export default function HomeComponent() {
         <p className="mx-auto mt-6 max-w-2xl text-2xl tracking-tight text-slate-700 dark:text-slate-500">
           {t("description")}
         </p>
+
+        <div className="mt-10 flex items-center justify-center gap-x-6">
+          <Button
+            className="h-11 rounded-xl px-8 py-2 bg-white text-indigo-500 hover:text-indigo-600 border-2 border-indigo-500"
+            variant="outline"
+            asChild
+          >
+            <Link
+              href={
+                siteConfig.socialLinks?.discord ||
+                "https://discord.com/invite/R7bUxWKRqZ"
+              }
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              title="Join Discord"
+              prefetch={false}
+              className="flex items-center gap-2"
+            >
+              <SiDiscord className="w-4 h-4 text-indigo-500" />
+              Join Discord
+            </Link>
+          </Button>
+        </div>
       </section>
 
       <section className="py-16">
