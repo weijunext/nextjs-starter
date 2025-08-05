@@ -1,8 +1,9 @@
 {
   "LanguageDetection": {
     "title": "语言建议",
-    "description": "检测到您的浏览器语言和当前语言不一样，您随时都可切换语言 👉",
-    "countdown": "将在 {countdown} 秒后关闭"
+    "description": "检测到你的浏览器语言和当前语言不一样，你随时都可切换语言。",
+    "countdown": "将在 {countdown} 秒后关闭",
+    "switchTo": "切换到"
   },
   "Header": {
     "links": [

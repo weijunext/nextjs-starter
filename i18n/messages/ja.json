@@ -1,8 +1,9 @@
 {
   "LanguageDetection": {
     "title": "言語の提案",
-    "description": "ブラウザの言語設定が現在のサイト言語と異なっています。いつでも言語を切り替えることができます 👉",
-    "countdown": "閉じるまで {countdown} 秒"
+    "description": "ブラウザの言語設定が現在のサイト言語と異なっています。いつでも言語を切り替えることができます。",
+    "countdown": "閉じるまで {countdown} 秒",
+    "switchTo": "に切り替える"
   },
   "Header": {
     "links": [
