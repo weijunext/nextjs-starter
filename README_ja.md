@@ -4,7 +4,7 @@ Nexty で SaaS を迅速に立ち上げよう - ビジュアル料金ダッシ�
 [Nexty.dev を今すぐ試す](https://nexty.dev?utm_source=github-nextjs-starter)
 ---
 
-[<img src="/public//try-nexty.webp">](https://nexty.dev?utm_source=github-nextjs-starter)
+[<img src="/public/try-nexty.webp">](https://nexty.dev?utm_source=github-nextjs-starter)
 
 🌍 *[English](README.md) ∙ [简体中文](README_zh.md) ∙ [日本語](README_ja.md)*
 
