@@ -1,5 +1,5 @@
 import { BlogCard } from "@/app/[locale]/blog/BlogCard";
-import { Locale } from "@/i18n/routing";
+import { Locale, LOCALES } from "@/i18n/routing";
 import { getPosts } from "@/lib/getBlogs";
 import { constructMetadata } from "@/lib/metadata";
 import { Metadata } from "next";
@@ -44,4 +44,8 @@ export default async function Page({ params }: { params: Params }) {
       </div>
     </div>
   );
+}
+
+export async function generateStaticParams() {
+  return LOCALES.map((locale) => ({ locale }));
 }
