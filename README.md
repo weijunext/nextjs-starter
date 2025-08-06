@@ -1,3 +1,12 @@
+---
+Ship your SaaS faster with Nexty - the only Next.js boilerplate featuring a visual pricing dashboard, AI playground, and enterprise-level CMS, plus i18n, auth, payment, email, and SEO optimization.
+
+Try [Nexty.dev today](https://nexty.dev?utm_source=github-nextjs-starter)
+---
+
+[<img src="/public/try-nexty.webp">](https://nexty.dev?utm_source=github-nextjs-starter)
+
+
 🌍 *[English](README.md) ∙ [简体中文](README_zh.md) ∙ [日本語](README_ja.md)*
 
 # Next Forge - Multilingual Next.js 15 Starter
@@ -7,7 +16,7 @@ A feature-rich Next.js 15 multilingual starter template to help you quickly buil
 - [👉 Source Code](https://github.com/weijunext/nextjs-15-starter)
 - [👉 Live Demo](https://nextforge.dev/)
 
-🚀 Looking for a full-featured SaaS Starter Kit? [Check out the complete version](https://nexty.dev)
+**🚀 Looking for a full-featured SaaS Starter Template? [Check out the complete version](https://nexty.dev)**
 
 ## ✨ Features
 

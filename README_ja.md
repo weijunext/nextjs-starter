@@ -1,3 +1,11 @@
+---
+Nexty で SaaS を迅速に立ち上げよう - ビジュアル料金ダッシュボード、AI プレイグラウンド、エンタープライズレベル CMS を備えた唯一の Next.js ボイラープレート。多言語対応、認証、決済、メール機能、SEO 最適化も完備。
+
+[Nexty.dev を今すぐ試す](https://nexty.dev?utm_source=github-nextjs-starter)
+---
+
+[<img src="/public//try-nexty.webp">](https://nexty.dev?utm_source=github-nextjs-starter)
+
 🌍 *[English](README.md) ∙ [简体中文](README_zh.md) ∙ [日本語](README_ja.md)*
 
 # Next Forge - 多言語対応 Next.js 15 スターター
@@ -7,7 +15,7 @@
 - [👉 ソースコード](https://github.com/weijunext/nextjs-15-starter)
 - [👉 デモサイト](https://nextforge.dev/)
 
-🚀 多機能で使いやすいフルスタックの起動テンプレートをお探しですか？ ぜひ、当社の[アドバンス版](https://nexty.dev)をお試しください。
+**🚀 多機能で使いやすいフルスタックの起動テンプレートをお探しですか？ ぜひ、当社の[アドバンス版](https://nexty.dev)をお試しください。**
 
 ## ✨ 主な機能
 

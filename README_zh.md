@@ -1,3 +1,11 @@
+---
+使用 Nexty 加速 SaaS 开发 - 唯一一个集成可视化定价面板、AI 开发环境和企业级 CMS 的 Next.js 模板，还包含多语言支持、身份验证、支付系统、电子邮件功能和 SEO 优化。
+
+立即体验 [Nexty.dev](https://nexty.dev/?utm_source=github-nextjs-starter)
+---
+
+[<img src="/public/try-nexty.webp">](https://nexty.dev/?utm_source=github-nextjs-starter)
+
 🌍 *[English](README.md) ∙ [简体中文](README_zh.md) ∙ [日本语](README_ja.md)*
 
 # Next Forge - 多语言 Next.js 15 启动模板
@@ -7,7 +15,7 @@
 - [👉 源码地址](https://github.com/weijunext/nextjs-15-starter)
 - [👉 在线预览](https://nextforge.dev/)
 
-🚀 如果你正在寻找功能完备的全栈启动模板，请了解我们的[高级版](https://nexty.dev)
+**🚀 如果你正在寻找功能完备的全栈启动模板，请了解我们的[高级版](https://nexty.dev/?utm_source=github-nextjs-starter)**
 
 ## ✨ 特性
 
