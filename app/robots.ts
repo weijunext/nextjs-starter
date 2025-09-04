@@ -24,7 +24,6 @@ export default function robots(): MetadataRoute.Robots {
         '/cdn-cgi/',
       ],
     },
-    sitemap: `${siteUrl}/sitemap.xml`,
-    host: siteUrl,
+    sitemap: `${siteUrl}/sitemap.xml`
   }
 }
