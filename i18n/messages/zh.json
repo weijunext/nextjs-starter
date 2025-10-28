@@ -118,8 +118,7 @@
   "Home": {
     "title": "Next Forge",
     "tagLine": "Next.js 多语言启动模板",
-    "description": "内置多语言支持的 Next.js 15 启动模板，助您快速构建面向全球的出海网站。简洁高效，开箱即用，完全优化的SEO基础架构。",
-    "whoIsUsing": "谁在使用此模板"
+    "description": "内置多语言支持的 Next.js 16 启动模板，助您快速构建面向全球的出海网站。简洁高效，开箱即用，完全优化的SEO基础架构。"
   },
   "Blog": {
     "title": "博客列表",

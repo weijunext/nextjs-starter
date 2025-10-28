@@ -8,9 +8,9 @@
 
 🌍 *[English](README.md) ∙ [简体中文](README_zh.md) ∙ [日本语](README_ja.md)*
 
-# Next Forge - 多语言 Next.js 15 启动模板
+# Next Forge - 多语言 Next.js 16 启动模板
 
-一个轻量的 Next.js 15 多语言启动模板，帮助你快速构建面向全球的网站。
+一个轻量的 Next.js 16 多语言启动模板，帮助你快速构建面向全球的网站。
 
 - [👉 源码地址](https://github.com/weijunext/nextjs-15-starter)
 - [👉 在线预览](https://nextforge.dev/)
@@ -166,7 +166,7 @@ nextjs-15-starter/
 
 ## 🛠️ 技术栈
 
-- **框架**: Next.js 15 (App Router)
+- **框架**: Next.js 16 (App Router)
 - **语言**: TypeScript
 - **样式**: Tailwind CSS + Shadcn/ui
 - **国际化**: next-intl

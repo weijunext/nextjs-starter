@@ -117,9 +117,8 @@
   },
   "Home": {
     "title": "Next Forge",
-    "tagLine": "Multilingual Next.js 15 Starter",
-    "description": "A multilingual Next.js 15 starter with built-in i18n support. Launch your global-ready web application with a clean, efficient, and SEO-friendly foundation.",
-    "whoIsUsing": "Who is Using This Starter"
+    "tagLine": "Multilingual Next.js 16 Starter",
+    "description": "A multilingual Next.js 16 starter with built-in i18n support. Launch your global-ready web application with a clean, efficient, and SEO-friendly foundation."
   },
   "Blog": {
     "title": "Blog Posts",

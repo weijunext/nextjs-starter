@@ -13,9 +13,9 @@ const DISCORD_URL = process.env.NEXT_PUBLIC_DISCORD_INVITE_URL
 
 export const siteConfig: SiteConfig = {
   name: "Next Forge",
-  tagLine: 'Multilingual Next.js 15 Starter',
+  tagLine: 'Multilingual Next.js 16 Starter',
   description:
-    "A multilingual Next.js 15 starter with built-in i18n support. Launch your global-ready web application with a clean, efficient, and SEO-friendly foundation.",
+    "A multilingual Next.js 16 starter with built-in i18n support. Launch your global-ready web application with a clean, efficient, and SEO-friendly foundation.",
   url: BASE_URL,
   authors: [
     {

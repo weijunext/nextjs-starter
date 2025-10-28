@@ -8,7 +8,7 @@ Nexty で SaaS を迅速に立ち上げよう - ビジュアル料金ダッシ�
 
 🌍 *[English](README.md) ∙ [简体中文](README_zh.md) ∙ [日本語](README_ja.md)*
 
-# Next Forge - 多言語対応 Next.js 15 スターター
+# Next Forge - 多言語対応 Next.js 16 スターター
 
 グローバル対応のウェブサイトを素早く構築するための、機能豊富なNext.js 15多言語スターターテンプレートです。
 
@@ -166,7 +166,7 @@ nextjs-15-starter/
 
 ## 🛠️ 技術スタック
 
-- **フレームワーク**: Next.js 15 (App Router)
+- **フレームワーク**: Next.js 16 (App Router)
 - **言語**: TypeScript
 - **スタイリング**: Tailwind CSS + Shadcn/ui
 - **国際化**: next-intl

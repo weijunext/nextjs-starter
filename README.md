@@ -11,9 +11,9 @@ Try [Nexty.dev today](https://nexty.dev?utm_source=github-nextjs-starter)
 
 🌍 *[English](README.md) ∙ [简体中文](README_zh.md) ∙ [日本語](README_ja.md)*
 
-# Next Forge - Multilingual Next.js 15 Starter
+# Next Forge - Multilingual Next.js 16 Starter
 
-A feature-rich Next.js 15 multilingual starter template to help you quickly build globally-ready websites.
+A feature-rich Next.js 16 multilingual starter template to help you quickly build globally-ready websites.
 
 - [👉 Source Code](https://github.com/weijunext/nextjs-15-starter)
 - [👉 Live Demo](https://nextforge.dev/)
@@ -169,7 +169,7 @@ nextjs-15-starter/
 
 ## 🛠️ Tech Stack
 
-- **Framework**: Next.js 15 (App Router)
+- **Framework**: Next.js 16 (App Router)
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS + Shadcn/ui
 - **Internationalization**: next-intl

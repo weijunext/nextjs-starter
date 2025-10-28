@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import WebsiteLogo from "@/components/WebsiteLogo";
 import { siteConfig } from "@/config/site";
 import { MousePointerClick } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -71,37 +70,6 @@ export default function HomeComponent() {
           </Button>
         </div>
       </section>
-
-      <section className="py-16">
-        <h2
-          id="who-is-using"
-          className="text-center text-3xl font-bold tracking-tight text-slate-900 dark:text-gray-200 mb-12"
-        >
-          {t("whoIsUsing")}
-        </h2>
-
-        <div className="flex flex-wrap items-center justify-center gap-8">
-          {WEBSITE_LOGO_DEMO.map((website) => (
-            <a
-              key={website.name}
-              href={website.url}
-              className="flex flex-col items-center p-4 w-[160px]"
-            >
-              <WebsiteLogo url={website.url} size={36} className="mb-3" />
-              <p className="mt-3 line-clamp-2 h-[3rem] text-sm text-slate-600 dark:text-slate-400 text-center">
-                {website.name}
-              </p>
-            </a>
-          ))}
-        </div>
-      </section>
     </>
   );
 }
-
-const WEBSITE_LOGO_DEMO = [
-  { name: "J Blog", url: "https://weijunext.com/" },
-  { name: "OG Image Generator", url: "https://ogimage.click/" },
-  { name: "newTab", url: "https://ntab.dev/" },
-  { name: "NextJS 中文文档", url: "https://nextjscn.org/" },
-];

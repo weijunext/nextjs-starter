@@ -123,6 +123,9 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
+# pnpm
+.pnpm-store/
+
 /.vuepress/dist/
 
 # sitemap
