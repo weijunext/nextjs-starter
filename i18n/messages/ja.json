@@ -17,7 +17,7 @@
       },
       {
         "name": "Source Code",
-        "href": "https://github.com/weijunext/nextjs-15-starter",
+        "href": "https://github.com/weijunext/nextjs-starter",
         "target": "_blank",
         "rel": "noopener noreferrer nofollow"
       },
@@ -59,7 +59,7 @@
           "title": "オープンソースプロジェクト",
           "links": [
             {
-              "href": "https://github.com/weijunext/nextjs-15-starter",
+              "href": "https://github.com/weijunext/nextjs-starter",
               "name": "Next Forge",
               "rel": "noopener noreferrer nofollow",
               "target": "_blank"

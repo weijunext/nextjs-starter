@@ -12,7 +12,7 @@
 
 一个轻量的 Next.js 16 多语言启动模板，帮助你快速构建面向全球的网站。
 
-- [👉 源码地址](https://github.com/weijunext/nextjs-15-starter)
+- [👉 源码地址](https://github.com/weijunext/nextjs-starter)
 - [👉 在线预览](https://nextforge.dev/)
 
 **🚀 如果你正在寻找功能完备的全栈启动模板，请了解我们的[高级版](https://nexty.dev/?utm_source=github-nextjs-starter)**
@@ -44,8 +44,8 @@
 
 1. 克隆项目:
 ```bash
-git clone https://github.com/weijunext/nextjs-15-starter.git
-cd nextjs-15-starter
+git clone https://github.com/weijunext/nextjs-starter.git
+cd nextjs-starter
 ```
 
 2. 启用 Corepack (推荐):
@@ -136,7 +136,7 @@ NEXT_PUBLIC_GOOGLE_ADSENSE=
 ## 📁 项目结构
 
 ```
-nextjs-15-starter/
+nextjs-starter/
 ├── app/                      # 应用路由目录
 │   ├── [locale]/            # 多语言路由
 │   │   ├── about/           # 关于页面
@@ -180,7 +180,7 @@ nextjs-15-starter/
 
 ### 一键部署
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/weijunext/nextjs-15-starter&project-name=&repository-name=nextjs-15-starter&demo-title=Nextjs15Starter&demo-description=Nextjs%2015%20starter.&demo-url=https://nextforge.dev&demo-image=https://nextforge.dev/og.png)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/weijunext/nextjs-starter&project-name=&repository-name=nextjs-starter&demo-title=NextjsStarter&demo-description=Nextjs%2015%20starter.&demo-url=https://nextforge.dev&demo-image=https://nextforge.dev/og.png)
 
 ### 手动部署到 Vercel
 

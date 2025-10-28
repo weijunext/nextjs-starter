@@ -12,7 +12,7 @@ Nexty で SaaS を迅速に立ち上げよう - ビジュアル料金ダッシ�
 
 グローバル対応のウェブサイトを素早く構築するための、機能豊富なNext.js 15多言語スターターテンプレートです。
 
-- [👉 ソースコード](https://github.com/weijunext/nextjs-15-starter)
+- [👉 ソースコード](https://github.com/weijunext/nextjs-starter)
 - [👉 デモサイト](https://nextforge.dev/)
 
 **🚀 多機能で使いやすいフルスタックの起動テンプレートをお探しですか？ ぜひ、当社の[アドバンス版](https://nexty.dev)をお試しください。**
@@ -44,8 +44,8 @@ Nexty で SaaS を迅速に立ち上げよう - ビジュアル料金ダッシ�
 
 1. リポジトリのクローン：
 ```bash
-git clone https://github.com/weijunext/nextjs-15-starter.git
-cd nextjs-15-starter
+git clone https://github.com/weijunext/nextjs-starter.git
+cd nextjs-starter
 ```
 
 2. Corepack の有効化（推奨）：
@@ -136,7 +136,7 @@ NEXT_PUBLIC_GOOGLE_ADSENSE=
 ## 📁 プロジェクト構成
 
 ```
-nextjs-15-starter/
+nextjs-starter/
 ├── app/                      # アプリディレクトリ
 │   ├── [locale]/            # 多言語ルート
 │   │   ├── about/           # Aboutページ
@@ -179,7 +179,7 @@ nextjs-15-starter/
 
 ### ワンクリックデプロイ
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/weijunext/nextjs-15-starter&project-name=&repository-name=nextjs-15-starter&demo-title=Nextjs15Starter&demo-description=Nextjs%2015%20starter.&demo-url=https://nextforge.dev&demo-image=https://nextforge.dev/og.png)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/weijunext/nextjs-starter&project-name=&repository-name=nextjs-starter&demo-title=NextjsStarter&demo-description=Nextjs%2015%20starter.&demo-url=https://nextforge.dev&demo-image=https://nextforge.dev/og.png)
 
 ### Vercelへの手動デプロイ
 
