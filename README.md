@@ -38,7 +38,7 @@ A feature-rich Next.js 16 multilingual starter template to help you quickly buil
 
 ### Prerequisites
 
-- Node.js 18.17 or higher
+- Node.js 20.9 or higher
 - pnpm 9.0 or higher (recommended)
 
 > **Note**: The project has configured `packageManager` field, we recommend using pnpm for the best experience.
