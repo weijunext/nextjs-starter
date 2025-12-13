@@ -136,7 +136,19 @@ NEXT_PUBLIC_BAIDU_TONGJI=
 NEXT_PUBLIC_GOOGLE_ADSENSE=
 ```
 
-## 📁 Project Structure
+## � Error Tracking
+
+This starter kit includes optional error tracking via [BugMail](https://bugmail.site).
+
+To enable it, add these variables to your `.env`:
+```bash
+NEXT_PUBLIC_BUGMAIL_API_KEY=your_api_key
+NEXT_PUBLIC_BUGMAIL_PROJECT_ID=your_project_id
+```
+
+If these variables are not present, error tracking is disabled and the app functions normally.
+
+## �📁 Project Structure
 
 ```
 nextjs-starter/

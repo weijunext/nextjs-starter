@@ -2,6 +2,7 @@ import BaiDuAnalytics from "@/app/BaiDuAnalytics";
 import GoogleAdsense from "@/app/GoogleAdsense";
 import GoogleAnalytics from "@/app/GoogleAnalytics";
 import PlausibleAnalytics from "@/app/PlausibleAnalytics";
+import { SafeBugMailProvider } from "@/components/bugmail-provider";
 import Footer from "@/components/footer/Footer";
 import Header from "@/components/header/Header";
 import { LanguageDetectionAlert } from "@/components/LanguageDetectionAlert";
@@ -75,34 +76,36 @@ export default async function LocaleLayout({
           "min-h-screen bg-background flex flex-col font-sans antialiased"
         )}
       >
-        <NextIntlClientProvider messages={messages}>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme={siteConfig.defaultNextTheme}
-            enableSystem
-          >
-            {messages.LanguageDetection && <LanguageDetectionAlert />}
-            {messages.Header && <Header />}
+        <SafeBugMailProvider>
+          <NextIntlClientProvider messages={messages}>
+            <ThemeProvider
+              attribute="class"
+              defaultTheme={siteConfig.defaultNextTheme}
+              enableSystem
+            >
+              {messages.LanguageDetection && <LanguageDetectionAlert />}
+              {messages.Header && <Header />}
 
-            <main className="flex-1 flex flex-col items-center">
-              {children}
-            </main>
+              <main className="flex-1 flex flex-col items-center">
+                {children}
+              </main>
 
-            {messages.Footer && <Footer />}
-          </ThemeProvider>
-        </NextIntlClientProvider>
-        <TailwindIndicator />
-        {process.env.NODE_ENV === "development" ? (
-          <></>
-        ) : (
-          <>
-            <Analytics />
-            <BaiDuAnalytics />
-            <GoogleAnalytics />
-            <GoogleAdsense />
-            <PlausibleAnalytics />
-          </>
-        )}
+              {messages.Footer && <Footer />}
+            </ThemeProvider>
+          </NextIntlClientProvider>
+          <TailwindIndicator />
+          {process.env.NODE_ENV === "development" ? (
+            <></>
+          ) : (
+            <>
+              <Analytics />
+              <BaiDuAnalytics />
+              <GoogleAnalytics />
+              <GoogleAdsense />
+              <PlausibleAnalytics />
+            </>
+          )}
+        </SafeBugMailProvider>
       </body>
     </html>
   );
