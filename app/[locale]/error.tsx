@@ -27,9 +27,10 @@ export default function Error({
     // Report to BugMail if configured
     if (reportError) {
       reportError(error);
+    } else {
+      // Fallback: log to console if BugMail is not configured
+      console.error('Application error:', error);
     }
-    // Always log to console for debugging
-    console.error('Application error:', error);
   }, [error]);
 
   return (
