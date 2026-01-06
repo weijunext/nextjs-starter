@@ -30,9 +30,9 @@ export default function HomeComponent() {
           {t("description")}
         </p>
 
-        <div className="mt-10 flex items-center justify-center gap-2">
+        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-2">
           <Button
-            className="h-11 rounded-xl px-8 py-2 bg-white text-indigo-500 hover:text-indigo-600 border-2 border-indigo-500"
+            className="h-11 w-full sm:w-fit rounded-xl px-8 py-2 bg-white text-indigo-500 hover:text-indigo-600 border-2 border-indigo-500"
             variant="outline"
             asChild
           >
@@ -49,7 +49,7 @@ export default function HomeComponent() {
             </Link>
           </Button>
           <Button
-            className="h-11 rounded-xl px-8 py-2 bg-white text-indigo-500 hover:text-indigo-600 border-2 border-indigo-500"
+            className="h-11 w-full sm:w-fit rounded-xl px-8 py-2 bg-white text-indigo-500 hover:text-indigo-600 border-2 border-indigo-500"
             variant="outline"
             asChild
           >
