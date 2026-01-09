@@ -1,5 +1,6 @@
 'use server';
 
+import { siteConfig } from '@/config/site';
 import resend from '@/lib/resend';
 import * as React from 'react';
 
@@ -27,7 +28,7 @@ export async function sendEmail({
       return { success: false, error: 'Resend is not configured' };
     }
 
-    const from = `Next Forge <${process.env.ADMIN_EMAIL}>`;
+    const from = `${siteConfig.name} <${process.env.ADMIN_EMAIL}>`;
 
     // Build unsubscribe link for email headers
     const unsubscribeToken = Buffer.from(email).toString('base64');

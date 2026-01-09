@@ -8,12 +8,12 @@
 
 🌍 *[English](README.md) ∙ [简体中文](README_zh.md) ∙ [日本语](README_ja.md)*
 
-# Next Forge - 多语言 Next.js 16 启动模板
+# Next.js Starter - 多语言 Next.js 16 启动模板
 
 一个轻量的 Next.js 16 多语言启动模板，帮助你快速构建面向全球的网站。
 
 - [👉 源码地址](https://github.com/weijunext/nextjs-starter)
-- [👉 在线预览](https://nextforge.dev/)
+- [👉 在线预览](https://nextjsstarter.io/)
 
 **🚀 如果你正在寻找功能完备的全栈启动模板，请了解我们的[高级版](https://nexty.dev/?utm_source=github-nextjs-starter)**
 
@@ -180,7 +180,7 @@ nextjs-starter/
 
 ### 一键部署
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/weijunext/nextjs-starter&project-name=&repository-name=nextjs-starter&demo-title=NextjsStarter&demo-description=Nextjs%2015%20starter.&demo-url=https://nextforge.dev&demo-image=https://nextforge.dev/og.png)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/weijunext/nextjs-starter&project-name=&repository-name=nextjs-starter&demo-title=NextjsStarter&demo-description=Nextjs%2015%20starter.&demo-url=https://nextjsstarter.io&demo-image=https://nextjsstarter.io/og.png)
 
 ### 手动部署到 Vercel
 

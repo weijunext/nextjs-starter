@@ -60,7 +60,7 @@
           "links": [
             {
               "href": "https://github.com/weijunext/nextjs-starter",
-              "name": "Next Forge",
+              "name": "Next.js Starter",
               "rel": "noopener noreferrer nofollow",
               "target": "_blank"
             },
@@ -99,7 +99,7 @@
     },
     "Newsletter": {
       "title": "Subscribe to our newsletter",
-      "description": "Get the latest news and updates from Next Forge",
+      "description": "Get the latest news and updates from Next.js Starterarter",
       "defaultErrorMessage": "Please enter a valid email address",
       "successMessage": "Subscription successful",
       "errorMessage": "Subscription failed",
@@ -110,7 +110,7 @@
     }
   },
   "Home": {
-    "title": "Next Forge",
+    "title": "Next.js Starterarter",
     "tagLine": "Multilingual Next.js 16 Starter",
     "description": "A multilingual Next.js 16 starter with built-in i18n support. Launch your global-ready web application with a clean, efficient, and SEO-friendly foundation."
   },

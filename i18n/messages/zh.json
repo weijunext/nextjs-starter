@@ -60,7 +60,7 @@
           "links": [
             {
               "href": "https://github.com/weijunext/nextjs-starter",
-              "name": "Next Forge",
+              "name": "Next.js Starter",
               "rel": "noopener noreferrer nofollow",
               "target": "_blank"
             },
@@ -110,7 +110,7 @@
     }
   },
   "Home": {
-    "title": "Next Forge",
+    "title": "Next.js Starterarter",
     "tagLine": "Next.js 多语言启动模板",
     "description": "内置多语言支持的 Next.js 16 启动模板，助您快速构建面向全球的出海网站。简洁高效，开箱即用，完全优化的SEO基础架构。"
   },

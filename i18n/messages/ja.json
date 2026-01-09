@@ -60,7 +60,7 @@
           "links": [
             {
               "href": "https://github.com/weijunext/nextjs-starter",
-              "name": "Next Forge",
+              "name": "Next.js Starter",
               "rel": "noopener noreferrer nofollow",
               "target": "_blank"
             },
@@ -98,8 +98,8 @@
       ]
     },
     "Newsletter": {
-      "title": "Next Forgeのニュースレターに登録する",
-      "description": "Next Forgeの最新のニュースと更新情報を入手します。",
+      "title": "Next.js Starterのニュースレターに登録する",
+      "description": "Next.js Starterの最新のニュースと更新情報を入手します。",
       "defaultErrorMessage": "有効なメールアドレスを入力してください。",
       "successMessage": "登録が完了しました。",
       "errorMessage": "登録に失敗しました。",
@@ -110,7 +110,7 @@
     }
   },
   "Home": {
-    "title": "Next Forge",
+    "title": "Next.js Starterarter",
     "tagLine": "Next.js 多言語スターターテンプレート",
     "description": "多言語対応機能を搭載したNext.js 15スターターテンプレート。SEO最適化済みで、グローバル展開可能なウェブアプリを効率的に構築できます。"
   },

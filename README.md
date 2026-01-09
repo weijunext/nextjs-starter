@@ -11,12 +11,12 @@ Try [Nexty.dev today](https://nexty.dev?utm_source=github-nextjs-starter)
 
 🌍 *[English](README.md) ∙ [简体中文](README_zh.md) ∙ [日本語](README_ja.md)*
 
-# Next Forge - Multilingual Next.js 16 Starter
+# Next.js Starter - Multilingual Next.js 16 Starter
 
 A feature-rich Next.js 16 multilingual starter template to help you quickly build globally-ready websites.
 
 - [👉 Source Code](https://github.com/weijunext/nextjs-starter)
-- [👉 Live Demo](https://nextforge.dev/)
+- [👉 Live Demo](https://nextjsstarter.io/)
 
 **🚀 Looking for a full-featured SaaS Starter Template? [Check out the complete version](https://nexty.dev)**
 
@@ -182,7 +182,7 @@ nextjs-starter/
 
 ### One-Click Deploy
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/weijunext/nextjs-starter&project-name=&repository-name=nextjs-starter&demo-title=NextjsStarter&demo-description=Nextjs%2015%20starter.&demo-url=https://nextforge.dev&demo-image=https://nextforge.dev/og.png)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/weijunext/nextjs-starter&project-name=&repository-name=nextjs-starter&demo-title=NextjsStarter&demo-description=Nextjs%2015%20starter.&demo-url=https://nextjsstarter.io&demo-image=https://nextjsstarter.io/og.png)
 
 ### Manual Deployment to Vercel
 
