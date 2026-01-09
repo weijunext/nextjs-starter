@@ -100,12 +100,7 @@ export async function getContactsFromAudience() {
       return { success: false, data: null };
     }
 
-    const audienceId = process.env.RESEND_AUDIENCE_ID;
-    if (!audienceId) {
-      return { success: true, data: null };
-    }
-
-    const list = await resend.contacts.list({ audienceId });
+    const list = await resend.contacts.list();
     return { success: true, data: list.data?.data || [] };
   } catch (error) {
     console.error('Failed to get contacts from audience:', error);
