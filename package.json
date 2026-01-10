@@ -1,6 +1,6 @@
 {
   "name": "next-forge",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "packageManager": "pnpm@10.12.4",
   "engines": {
     "node": "20.x"
