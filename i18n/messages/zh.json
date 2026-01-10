@@ -110,7 +110,7 @@
     }
   },
   "Home": {
-    "title": "Next.js Starterarter",
+    "title": "Next.js Starter",
     "tagLine": "Next.js 多语言启动模板",
     "description": "内置多语言支持的 Next.js 16 启动模板，助您快速构建面向全球的出海网站。简洁高效，开箱即用，完全优化的SEO基础架构。"
   },
@@ -129,5 +129,22 @@
   "PrivacyPolicy": {
     "title": "隐私政策",
     "description": "隐私政策"
+  },
+  "Showcase": {
+    "title": "使用案例展示",
+    "description": "探索使用本 Next.js 启动模板构建的优秀产品和网站。",
+    "visitSite": "访问网站"
+  },
+  "Submission": {
+    "badge": "获得展示",
+    "title": "提交您的产品",
+    "description": "用这套模板构建了出色的产品？与我们的社区分享您的作品，并在展示区获得曝光。",
+    "productNameLabel": "产品名称",
+    "productNamePlaceholder": "我的优秀项目",
+    "productUrlLabel": "产品链接",
+    "submit": "提交产品",
+    "submitting": "提交中...",
+    "successMessage": "感谢您的提交！我们会尽快审核。",
+    "errorMessage": "出了点问题，请重试。"
   }
 }

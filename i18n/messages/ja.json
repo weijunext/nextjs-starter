@@ -110,7 +110,7 @@
     }
   },
   "Home": {
-    "title": "Next.js Starterarter",
+    "title": "Next.js Starter",
     "tagLine": "Next.js 多言語スターターテンプレート",
     "description": "多言語対応機能を搭載したNext.js 15スターターテンプレート。SEO最適化済みで、グローバル展開可能なウェブアプリを効率的に構築できます。"
   },
@@ -129,5 +129,22 @@
   "PrivacyPolicy": {
     "title": "プライバシーポリシー",
     "description": "プライバシーポリシー"
+  },
+  "Showcase": {
+    "title": "導入事例",
+    "description": "このNext.jsスターターテンプレートを使用して構築された素晴らしい製品とウェブサイトをご覧ください。",
+    "visitSite": "サイトを見る"
+  },
+  "Submission": {
+    "badge": "掲載されよう",
+    "title": "製品を提出する",
+    "description": "このスターターで素晴らしいものを作りましたか？コミュニティと共有して、ショーケースに掲載されましょう。",
+    "productNameLabel": "製品名",
+    "productNamePlaceholder": "私の素晴らしいプロジェクト",
+    "productUrlLabel": "製品URL",
+    "submit": "製品を提出",
+    "submitting": "送信中...",
+    "successMessage": "ありがとうございます！提出を受け付けました。まもなく確認いたします。",
+    "errorMessage": "エラーが発生しました。もう一度お試しください。"
   }
 }
