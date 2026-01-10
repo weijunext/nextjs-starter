@@ -39,7 +39,7 @@ export default function Hero() {
             href="https://nexty.dev/"
             target="_blank"
             rel="noopener noreferrer"
-            title="Get SaaS Version - Nexty.dev"
+            title="Get SaaS Version - NEXTY.DEV"
             prefetch={false}
             className="flex items-center gap-2"
           >

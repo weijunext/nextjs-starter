@@ -1,7 +1,7 @@
 ---
 Nexty で SaaS を迅速に立ち上げよう - ビジュアル料金ダッシュボード、AI プレイグラウンド、エンタープライズレベル CMS を備えた唯一の Next.js ボイラープレート。多言語対応、認証、決済、メール機能、SEO 最適化も完備。
 
-[Nexty.dev を今すぐ試す](https://nexty.dev?utm_source=github-nextjs-starter)
+[NEXTY.DEV を今すぐ試す](https://nexty.dev?utm_source=github-nextjs-starter)
 ---
 
 [<img src="/public/try-nexty.webp">](https://nexty.dev?utm_source=github-nextjs-starter)
