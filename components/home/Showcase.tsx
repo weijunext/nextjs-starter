@@ -1,13 +1,11 @@
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { ArrowUpRightIcon, Trophy } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
-import Image from "next/image";
 import Link from "next/link";
 
 interface ShowcaseItem {
   name: string;
   url: string;
-  logo?: string;
 }
 
 // Hardcoded showcase data - add your products here
@@ -15,46 +13,46 @@ const showcaseItems: ShowcaseItem[] = [
   {
     name: "OG Image Generator",
     url: "https://myogimage.com",
-    logo: "/assets/showcases/myogimage.com.png",
   },
   {
     name: "Black's Screen",
     url: "https://www.blacksscreen.com/",
-    logo: "/assets/showcases/blacksscreen.com.png",
   },
   {
     name: "Pinpoint Answer",
     url: "https://pinpointanswer.today/",
-    logo: "/assets/showcases/pinpointanswer.today.webp",
   },
   {
     name: "Dead Pixel Test",
     url: "https://screen-test.net/",
-    logo: "/assets/showcases/screen-test.net.svg",
   },
   {
     name: "Ouke Machinery",
     url: "https://www.oukemac.com/",
-    logo: "/assets/showcases/oukemac.com.webp",
   },
   {
     name: "Ouke Machinery",
     url: "https://oukepoultry.com/",
-    logo: "/assets/showcases/oukepoultry.com.webp",
   },
   {
     name: "Robot Apex",
     url: "https://ai-apex.top/",
-    logo: "/assets/showcases/ai-apex.top.png",
   },
   {
     name: "PicArt - Online Puzzle Tool",
     url: "https://www.puzzletool.online/",
-    logo: "/assets/showcases/puzzletool.online.webp",
   },
   {
     name: "Escape From Duckov Wiki",
     url: "https://www.escapefromduckov.io/",
+  },
+  {
+    name: "FileMerges",
+    url: "https://filemerges.net/",
+  },
+  {
+    name: "Khuzama Valley Investment",
+    url: "https://khuzamainv.com/",
   },
 ];
 
@@ -123,20 +121,8 @@ export default function Showcase() {
             href={item.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative flex items-center p-4 bg-white dark:bg-slate-800/50 rounded-2xl border border-slate-200 dark:border-slate-700 hover:border-blue-500 dark:hover:border-blue-500 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10"
+            className="group relative flex items-center p-4 bg-white dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-blue-500 dark:hover:border-blue-500 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10"
           >
-            <div className="relative flex-shrink-0 w-12 h-12 rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-700 flex items-center justify-center mr-4 border border-slate-100 dark:border-slate-600">
-              {item.logo && (
-                <Image
-                  src={item.logo}
-                  alt={`${item.name} logo`}
-                  width={48}
-                  height={48}
-                  className="object-contain p-1"
-                />
-              )}
-            </div>
-
             <div className="flex-grow min-w-0">
               <h3 className="text-base font-semibold text-slate-900 dark:text-gray-200 truncate pr-6 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                 {item.name}
