@@ -1,5 +1,6 @@
-import { ArrowUpRightIcon } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { ArrowUpRightIcon, Trophy } from "lucide-react";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -59,6 +60,7 @@ const showcaseItems: ShowcaseItem[] = [
 
 export default function Showcase() {
   const t = useTranslations("Showcase");
+  const locale = useLocale();
 
   return (
     <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
@@ -69,6 +71,49 @@ export default function Showcase() {
         <p className="mt-4 text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
           {t("description")}
         </p>
+
+        {locale === "zh" && (
+          <div className="mt-8 flex justify-center px-4">
+            <Alert className="max-w-3xl text-left bg-blue-50/50 dark:bg-blue-900/10 border-blue-200 dark:border-blue-800 shadow-sm">
+              <Trophy className="h-5 w-5 text-amber-500 mt-0.5" />
+              <AlertTitle className="text-blue-900 dark:text-blue-100 font-semibold mb-2">
+                冠军的选择
+              </AlertTitle>
+              <AlertDescription className="text-slate-700 dark:text-slate-300 space-y-2">
+                <p>
+                  SEO专家哥飞的社群2025年网站比赛，冠军产品（年度流量Top1）使用的就是这套模板。
+                </p>
+                <div className="mt-2">
+                  <span className="font-medium text-slate-900 dark:text-slate-200 block mb-1">
+                    相关报道：
+                  </span>
+                  <ul className="list-disc list-inside space-y-1 text-slate-600 dark:text-slate-400">
+                    <li>
+                      <a
+                        href="https://mp.weixin.qq.com/s/R-8KTmo6Wj6vUWNIueFI5A"
+                        target="_blank"
+                        rel="noopener noreferrer nofollow"
+                        className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 hover:underline decoration-blue-300 underline-offset-2 transition-colors"
+                      >
+                        2025年度网站比赛出炉，冠军5个月拿下526万独立访客
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://m.okjike.com/originalPosts/695fee6d800201ac6838a173?s=ewoidSI6ICI1OGExMWY0ODg4ZjNkYjAwMTYxMDJlNWEiCn0="
+                        target="_blank"
+                        rel="noopener noreferrer nofollow"
+                        className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 hover:underline decoration-blue-300 underline-offset-2 transition-colors"
+                      >
+                        冠军介绍模板
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </AlertDescription>
+            </Alert>
+          </div>
+        )}
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
