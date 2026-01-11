@@ -7,6 +7,13 @@ import { BlogPost } from "@/types/blog";
 import { Metadata } from "next";
 import { MDXRemote } from "next-mdx-remote-client/rsc";
 import { notFound } from "next/navigation";
+import remarkGfm from "remark-gfm";
+
+const mdxOptions = {
+  mdxOptions: {
+    remarkPlugins: [remarkGfm],
+  },
+};
 
 type Params = Promise<{
   locale: string;
@@ -79,7 +86,11 @@ export default async function BlogPage({ params }: { params: Params }) {
         <></>
       )}
       {post.description && <Callout>{post.description}</Callout>}
-      <MDXRemote source={post?.content || ""} components={MDXComponents} />
+      <MDXRemote
+        source={post?.content || ""}
+        components={MDXComponents}
+        options={mdxOptions}
+      />
     </div>
   );
 }
