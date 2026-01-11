@@ -24,7 +24,7 @@ const showcaseItems: ShowcaseItem[] = [
   },
   {
     name: "Dead Pixel Test",
-    url: "https://screen-test.net/",
+    url: "https://deadpixelstest.com/",
   },
   {
     name: "Ouke Machinery",
