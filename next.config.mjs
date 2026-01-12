@@ -5,6 +5,9 @@ const withNextIntl = createNextIntlPlugin();
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
+    unoptimized:
+      process.env.NEXT_PUBLIC_OPTIMIZED_IMAGES &&
+      process.env.NEXT_PUBLIC_OPTIMIZED_IMAGES === "false",
     remotePatterns: [
       ...(process.env.R2_PUBLIC_URL
         ? [
