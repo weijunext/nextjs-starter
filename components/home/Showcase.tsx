@@ -11,6 +11,10 @@ interface ShowcaseItem {
 // Hardcoded showcase data - add your products here
 const showcaseItems: ShowcaseItem[] = [
   {
+    name: "submitnow",
+    url: "https://www.submitnow.dev/",
+  },
+  {
     name: "OG Image Generator",
     url: "https://myogimage.com",
   },
