@@ -11,6 +11,10 @@ interface ShowcaseItem {
 // Hardcoded showcase data - add your products here
 const showcaseItems: ShowcaseItem[] = [
   {
+    name: "vget",
+    url: "https://www.vget.io/",
+  },
+  {
     name: "submitnow",
     url: "https://www.submitnow.dev/",
   },
