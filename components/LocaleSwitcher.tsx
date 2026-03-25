@@ -27,14 +27,13 @@ export default function LocaleSwitcher() {
   const locale = useLocale();
   const { dismissLanguageAlert } = useLocaleStore();
   const [, startTransition] = useTransition();
-  const [currentLocale, setCurrentLocale] = useState("locale");
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setCurrentLocale(locale);
-  }, [locale, setCurrentLocale]);
+    setMounted(true);
+  }, []);
 
   function onSelectChange(nextLocale: Locale) {
-    setCurrentLocale(nextLocale);
     dismissLanguageAlert();
 
     startTransition(() => {
@@ -44,18 +43,26 @@ export default function LocaleSwitcher() {
         // always match for the current route, we can skip runtime checks.
         // { pathname: "/", params: params || {} }, // if your want to redirect to the home page
         { pathname, params: params || {} }, // if your want to redirect to the current page
-        { locale: nextLocale }
+        { locale: nextLocale },
       );
     });
   }
 
+  // 防止 hydration 不匹配，先不渲染直到客户端挂载
+  if (!mounted) {
+    return (
+      <div className="w-fit h-9 bg-transparent border border-white/30 rounded-md px-3 py-2 flex items-center">
+        <Globe className="w-4 h-4 mr-1 text-white" />
+        <span className="text-white text-sm">
+          {LOCALE_NAMES[locale as Locale]}
+        </span>
+      </div>
+    );
+  }
+
   return (
-    <Select
-      defaultValue={locale}
-      value={currentLocale}
-      onValueChange={onSelectChange}
-    >
-      <SelectTrigger className="w-fit">
+    <Select value={locale} onValueChange={onSelectChange}>
+      <SelectTrigger className="w-fit bg-transparent border-white/30 text-white hover:bg-white/10">
         <Globe className="w-4 h-4 mr-1" />
         <SelectValue placeholder="Language" />
       </SelectTrigger>
