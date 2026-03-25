@@ -48,7 +48,7 @@ export default function LocaleSwitcher() {
     });
   }
 
-  // 防止 hydration 不匹配，先不渲染直到客户端挂载
+  // avoid hydration mismatch, don't render until client is mounted
   if (!mounted) {
     return (
       <div className="w-fit h-9 bg-transparent border border-white/30 rounded-md px-3 py-2 flex items-center">
