@@ -51,9 +51,9 @@ export default function LocaleSwitcher() {
   // avoid hydration mismatch, don't render until client is mounted
   if (!mounted) {
     return (
-      <div className="w-fit h-9 bg-transparent border border-white/30 rounded-md px-3 py-2 flex items-center">
-        <Globe className="w-4 h-4 mr-1 text-white" />
-        <span className="text-white text-sm">
+      <div className="w-fit h-9 bg-transparent border border-gray-300 dark:border-white/30 rounded-md px-3 py-2 flex items-center">
+        <Globe className="w-4 h-4 mr-1 text-gray-800 dark:text-white" />
+        <span className="text-gray-800 dark:text-white text-sm">
           {LOCALE_NAMES[locale as Locale]}
         </span>
       </div>
@@ -62,7 +62,7 @@ export default function LocaleSwitcher() {
 
   return (
     <Select value={locale} onValueChange={onSelectChange}>
-      <SelectTrigger className="w-fit bg-transparent border-white/30 text-white hover:bg-white/10">
+      <SelectTrigger className="w-fit bg-transparent border-gray-300 dark:border-white/30 text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-white/10">
         <Globe className="w-4 h-4 mr-1" />
         <SelectValue placeholder="Language" />
       </SelectTrigger>
