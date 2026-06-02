@@ -11,14 +11,24 @@ export interface ListContactsResult {
   error?: string;
 }
 
-type AudienceProviderType = 'resend' | 'redis';
+type AudienceProviderType = 'resend' | 'redis' | 'none';
 
 const REDIS_CONTACTS_KEY = 'email:contacts';
 
+function isRedisConfigured(): boolean {
+  return !!(
+    process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN
+  );
+}
+
 function getAudienceProvider(): AudienceProviderType {
-  // When EMAIL_PROVIDER=cloudflare, fallback to Redis for audience storage
+  // When EMAIL_PROVIDER=cloudflare, fall back to Redis for audience storage
   // because Cloudflare Email does not provide contact/audience management.
-  if (process.env.EMAIL_PROVIDER === 'cloudflare') return 'redis';
+  // Redis is optional, though: if it isn't configured we simply skip recording
+  // contacts so that sending email still works without forcing a Redis setup.
+  if (process.env.EMAIL_PROVIDER === 'cloudflare') {
+    return isRedisConfigured() ? 'redis' : 'none';
+  }
   return 'resend';
 }
 
@@ -143,6 +153,10 @@ export async function addContactToAudience(
   email: string
 ): Promise<AudienceResult> {
   const provider = getAudienceProvider();
+  // No audience storage configured (Cloudflare without Redis): skip silently.
+  if (provider === 'none') {
+    return { success: true };
+  }
   if (provider === 'redis') {
     return addContactRedis(email);
   }
@@ -153,6 +167,9 @@ export async function removeContactFromAudience(
   email: string
 ): Promise<AudienceResult> {
   const provider = getAudienceProvider();
+  if (provider === 'none') {
+    return { success: true };
+  }
   if (provider === 'redis') {
     return removeContactRedis(email);
   }
@@ -161,6 +178,11 @@ export async function removeContactFromAudience(
 
 export async function getContactsFromAudience(): Promise<ListContactsResult> {
   const provider = getAudienceProvider();
+  // No audience storage: return no data (not an empty list) so callers skip
+  // the "is this email subscribed?" check instead of rejecting every email.
+  if (provider === 'none') {
+    return { success: true };
+  }
   if (provider === 'redis') {
     return listContactsRedis();
   }
