@@ -42,6 +42,7 @@
     "react-icons": "^5.4.0",
     "remark-gfm": "^4.0.0",
     "resend": "^6.7.0",
+    "@react-email/render": "^1.1.2",
     "tailwind-merge": "^2.5.5",
     "tailwindcss-animate": "^1.0.7",
     "winston": "^3.17.0",

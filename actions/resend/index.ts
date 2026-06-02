@@ -1,7 +1,12 @@
 'use server';
 
 import { siteConfig } from '@/config/site';
-import resend from '@/lib/resend';
+import { sendEmail as sendEmailUniversal } from '@/lib/mailer';
+import {
+  addContactToAudience as addContactUniversal,
+  removeContactFromAudience as removeContactUniversal,
+  getContactsFromAudience as getContactsUniversal,
+} from '@/lib/audience';
 import * as React from 'react';
 
 interface SendEmailProps {
@@ -23,11 +28,6 @@ export async function sendEmail({
       return { success: false, error: 'Email is required' };
     }
 
-    if (!resend) {
-      console.error('Resend API key is not set');
-      return { success: false, error: 'Resend is not configured' };
-    }
-
     const from = `${siteConfig.name} <${process.env.ADMIN_EMAIL}>`;
 
     // Build unsubscribe link for email headers
@@ -39,9 +39,9 @@ export async function sendEmail({
       ? React.createElement(react as React.ComponentType<any>, reactProps)
       : (react as React.ReactElement);
 
-    await resend.emails.send({
-      from,
+    const result = await sendEmailUniversal({
       to: email,
+      from,
       subject,
       react: emailContent,
       headers: {
@@ -49,6 +49,11 @@ export async function sendEmail({
         'List-Unsubscribe-Post': 'List-Unsubscribe=One-Click',
       },
     });
+
+    if (!result.success) {
+      console.error('Failed to send email:', result.error);
+      return { success: false, error: result.error || 'Failed to send email' };
+    }
 
     return { success: true };
   } catch (error) {
@@ -60,15 +65,12 @@ export async function sendEmail({
 // Add contact to audience
 export async function addContactToAudience(email: string) {
   try {
-    if (!email || !resend) {
+    if (!email) {
       return { success: false };
     }
 
-    await resend.contacts.create({
-      email,
-    });
-
-    return { success: true };
+    const result = await addContactUniversal(email);
+    return { success: result.success };
   } catch (error) {
     console.error('Failed to add contact to audience:', error);
     return { success: false };
@@ -78,15 +80,12 @@ export async function addContactToAudience(email: string) {
 // Remove contact from audience
 export async function removeContactFromAudience(email: string) {
   try {
-    if (!email || !resend) {
+    if (!email) {
       return { success: false };
     }
 
-    await resend.contacts.remove({
-      email,
-    });
-
-    return { success: true };
+    const result = await removeContactUniversal(email);
+    return { success: result.success };
   } catch (error) {
     console.error('Failed to remove contact from audience:', error);
     return { success: false };
@@ -96,15 +95,10 @@ export async function removeContactFromAudience(email: string) {
 // List contacts in audience (for checking if email exists)
 export async function getContactsFromAudience() {
   try {
-    if (!resend) {
-      return { success: false, data: null };
-    }
-
-    const list = await resend.contacts.list();
-    return { success: true, data: list.data?.data || [] };
+    const result = await getContactsUniversal();
+    return { success: result.success, data: result.data || null };
   } catch (error) {
     console.error('Failed to get contacts from audience:', error);
     return { success: false, data: null };
   }
 }
-
