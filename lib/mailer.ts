@@ -55,20 +55,30 @@ async function sendWithResend(
     const resend = new Resend(apiKey);
 
     const from = options.from || process.env.ADMIN_EMAIL;
+    if (!from) {
+      return { success: false, error: 'Sender email (from) is required' };
+    }
 
     let reactElement: React.ReactElement | undefined;
     if (options.react) {
       reactElement = getReactElement(options.react, options.reactProps);
     }
 
+    // Resend's CreateEmailOptions is a discriminated union requiring exactly
+    // one content field (react | html | text). Build the payload with only the
+    // content that is actually provided so it matches a single union member.
+    const content = reactElement
+      ? { react: reactElement }
+      : options.html != null
+        ? { html: options.html }
+        : { text: options.text ?? '' };
+
     const { data, error } = await resend.emails.send({
       from,
       to: options.to,
       subject: options.subject,
-      react: reactElement,
-      html: options.html,
-      text: options.text,
       headers: options.headers,
+      ...content,
     });
 
     if (error) {
