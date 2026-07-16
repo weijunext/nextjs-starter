@@ -11,6 +11,10 @@ interface ShowcaseItem {
 // Hardcoded showcase data - add your products here
 const showcaseItems: ShowcaseItem[] = [
   {
+    name: "Hubble Birthday",
+    url: "https://hubblebirthday.com/",
+  },
+  {
     name: "vget",
     url: "https://www.vget.io/",
   },
